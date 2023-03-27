@@ -5,14 +5,16 @@ const boxes = document.querySelector("#boxes");
 
 function createBoxes(amount) {
   let boxSize = 30;
-  Array.from({ length: amount }).forEach((i) => {
+  const newBoxes = [];
+  for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxes.appendChild(box);
+    newBoxes.push(box);
     boxSize += 10;
-  })
+  }
+  boxes.append(...newBoxes);
 };
 
 function destroyBoxes() {
