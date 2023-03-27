@@ -6,10 +6,10 @@ let currentValue = 0;
 
 decrementButton.addEventListener("click", () => {
     currentValue -= 1;
-    currentValue.textContent = currentValue;
+    counterValue.textContent = currentValue;
 });
 
 incrementButton.addEventListener("click", () => {
     currentValue += 1;
-    currentValue.textContent = currentValue;
+    counterValue.textContent = currentValue;
 });
