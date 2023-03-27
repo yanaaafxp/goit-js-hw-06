@@ -5,15 +5,15 @@ const boxes = document.querySelector("#boxes");
 
 function createBoxes(amount) {
   let boxSize = 30;
-  for (let i = 0; i < amount; i++) {
+  Array.from({ length: amount }).forEach((i) => {
     const box = document.createElement("div");
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.style.backgroundColor = getRandomHexColor();
     boxes.appendChild(box);
     boxSize += 10;
-  }
-}
+  })
+};
 
 function destroyBoxes() {
   boxes.innerHTML = "";
