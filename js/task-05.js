@@ -2,9 +2,9 @@ const nameInput = document.querySelector('#name-input');
 const nameOutput = document.querySelector('#name-output');
 
 nameInput.addEventListener("input", () => {
-    if (nameOutput.value === "") {
-        nameOutput.textContent = "Anonymus";
-    } else {
+    if (nameInput.value !== "") {
         nameOutput.textContent = nameInput.value;
+    } else {
+        nameOutput.textContent = "Anonymus";
     }
 });
